@@ -1,0 +1,37 @@
+# Node modules
+node_modules
+npm-debug.log
+
+# Environment variables file
+.env
+
+# Docker files
+Dockerfile
+docker-compose.yml
+docker-compose.prod.yml
+docker-compose.dev.yml
+
+# Logs
+logs
+*.log
+
+# Build output
+dist
+build
+out
+
+# Temporary files
+tmp
+temp
+.cache
+.cache/
+
+# IDE and OS-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Git files
+.git
+.gitignore
