@@ -2,9 +2,6 @@
 node_modules
 npm-debug.log
 
-# Environment variables file
-.env
-
 # Docker files
 Dockerfile
 docker-compose.yml
