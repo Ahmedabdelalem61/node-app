@@ -22,7 +22,7 @@ services:
   nginx:
     image: nginx:stable-alpine
     ports:
-      - "88:80"
+      - "80:80"
     depends_on:
       - node-app
     volumes:
