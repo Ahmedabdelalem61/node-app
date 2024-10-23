@@ -2,20 +2,20 @@ const express = require("express");
 // const mongoose = require("mongoose");
 const redis = require("redis"); // Import Redis
 
-const { Client } = require("pg");
+// const { Client } = require("pg");
 
 // Create a client instance using a connection string
-const client = new Client("postgres://root:example@postgres:5432");
+// const client = new Client("postgres://root:example@postgres:5432");
 
 // Connect to the database
-client
-  .connect()
-  .then(() => {
-    console.log("Connected to PostgreSQL successfully");
-  })
-  .catch((err) => {
-    console.error("Connection error", err.stack);
-  });
+// client
+//   .connect()
+//   .then(() => {
+//     console.log("Connected to PostgreSQL successfully");
+//   })
+//   .catch((err) => {
+//     console.error("Connection error", err.stack);
+//   });
 
 const app = express();
 const PORT = process.env.PORT || 4000;
