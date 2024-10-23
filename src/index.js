@@ -1,4 +1,6 @@
 const express = require("express");
+const fs = require('fs');
+
 // const mongoose = require("mongoose");
 const redis = require("redis"); // Import Redis
 
@@ -49,7 +51,13 @@ redisClient.connect(); // Use Redis v4 connect method
 app.get("/", async (req, res) => {
   try {
     await redisClient.set("greeting", "Hello from Redis!"); // Set key-value pair in Redis
-    res.send("<h1>Data stored in Redis!</h1>");
+    fs.readFile('template.html', 'utf8', (err, data) => {
+      if (err) {
+        res.status(500).send("Error reading template file.");
+        return;
+      }
+      res.send(data); // Send the contents of the HTML file
+    });
   } catch (error) {
     res.status(500).send("Error storing data in Redis.");
   }
