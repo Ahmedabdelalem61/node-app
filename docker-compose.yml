@@ -5,6 +5,7 @@ services:
       - postgres
       - redis
     container_name: node-app-container
+    image: numerician/node-app
     ports:
       - "4000:4000"
     env_file:
